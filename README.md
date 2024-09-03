@@ -45,8 +45,8 @@ Built using Flask, JavaScript, CSS, and HTML, Tamil Nadu Scheme Connect offers u
 - `./index_store_final/`: Directory for storing vector indexes (`vector.zip` available in the Google Drive link).
 - `venv/`: (Optional) Environment variables file.
 - `requirements.txt`: Lists the project dependencies.
-- `Templates/`: Contains HTML files (`chatbot.html`, `index.html`, `login.html`, `map.html`, `newsmain.html`).
-- `Scripts/`: Contains JavaScript and CSS files (`mapscripts.js`, `mapstyles.css`, `newsscripts.js`, `newsstyles.css`, `scripts.js`, `styles.css`).
+- `templates/`: Contains HTML files (`chatbot.html`, `index.html`, `login.html`, `map.html`, `newsmain.html`).
+- `scripts/`: Contains JavaScript and CSS files (`mapscripts.js`, `mapstyles.css`, `newsscripts.js`, `newsstyles.css`, `scripts.js`, `styles.css`).
 
 ## Dependencies
 
