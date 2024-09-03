@@ -1,0 +1,392 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3E262E; /* Dark base background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Change to white */
+}
+
+/* Container for chat history and chat interface */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 600px;
+    margin-top: 2px;
+    margin-left: -20px;
+    position: relative; /* Added for positioning of the dropdown */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #865D36; /* Darker background */
+    padding: 1rem;
+    color: white; /* Change to white */
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white; /* Change to white */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #AC8968; /* Lighter hover color */
+}
+
+/* Chat History Panel */
+#chat-history {
+    width: 47%; /* Fixed width, adjust as needed */
+    min-width: 300px; /* Optional: Ensure it doesn't shrink below a certain width */
+    background-color: #A69080; /* Background color for chat history */
+    padding: 10px;
+    padding-bottom: 40px; /* Additional padding at the bottom for space */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: -20px; /* Space between chat history and chat interface */
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    max-height: 500px; /* Fixed height, adjust as needed */
+    overflow: hidden; /* Hide overflow to maintain fixed height */
+    color: black; /* Change text to black */
+}
+
+/* Dropdown Container */
+#dropdown-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Dropdown Styles */
+#sort-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #865D36; /* Darker border color */
+    background-color: #A69080; /* Background color */
+    color: black; /* Change text to black */
+}
+
+/* History Messages */
+#history-messages {
+    max-height: calc(100% - 50px); /* Ensure it fits within the chat-history panel with space for header and padding */
+    overflow-y: auto;
+    padding: 10px;
+    padding-bottom: 30px; /* Space at the bottom of the messages area */
+    background-color: #93785B; /* Light brown background */
+    border-radius: 5px;
+    border: 1px solid #865D36; /* Darker border color */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    color: black; /* Change text to black */
+}
+
+/* Chatbot Container */
+#chatbot {
+    width: 80%;
+    max-height: 500px; /* Set a fixed maximum height */
+    background-color: #A69080; /* Background color */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Hide overflow to maintain fixed height */
+    color: black; /* Change text to black */
+}
+
+/* Messages Container */
+#messages {
+    flex: 1; /* Allows the messages container to expand and fill available space */
+    max-height: calc(100% - 60px); /* Adjust based on the estimated space for buttons */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    background-color: #93785B; /* Light brown background */
+    border-radius: 5px;
+    border: 1px solid #865D36; /* Darker border color */
+    margin-bottom: 10px; /* Space for the buttons */
+    color: black; /* Change text to black */
+}
+
+/* Message Styles */
+.message {
+    margin-bottom: 15px;
+}
+
+/* User Message (Black Text) */
+.message.user {
+    text-align: right;
+    color: black; /* Change user message color to black */
+    background-color: #E5E5E5; /* Optional: Light background to contrast the black text */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word; /* Ensure long text wraps */
+    margin-left: 40px;
+
+}
+
+/* Assistant Message (White Text) */
+.message.assistant {
+    text-align: left;
+    color: white; /* Keep assistant message color as white */
+    background-color: #3E262E; /* Optional: Dark background to contrast the white text */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word; /* Ensure long text wraps */
+}
+
+
+/* Input Container */
+.input-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between input and buttons */
+}
+
+/* Input Field */
+input[type="text"] {
+    flex: 1; /* Allows the input to take up remaining space */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #865D36; /* Darker border color */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #A69080; /* Background color */
+    color: black; /* Change text to black */
+}
+
+/* Button Styling */
+button {
+    width: 50px; /* Set width and height to be equal */
+    height: 50px;
+    padding: 0;
+    background-color: #AC8968; /* Button background color */
+    color: black; /* Change text to black */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #865D36; /* Darker background color on hover */
+}
+
+/* Remove border if there's any default border */
+button:focus {
+    outline: none;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    width: 98%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #AC8968; /* Header background color */
+    padding: 20px 40px; /* Reduced padding to decrease height */
+    color: white; /* Keep text color white */
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    position: relative;
+}
+
+/* Header Title */
+h1 {
+    font-size: 1.2em; /* Adjust font size if needed to fit the reduced height */
+    margin: 0; /* Remove default margin to avoid extra height */
+}
+
+.header-button {
+    background-color: #AC8968; /* Blue background */
+    color: white; /* Keep text color white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 5px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header-button:hover {
+    background-color: #865D36; /* Darker color on hover */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #865D36; /* Darker border color */
+    color: black; /* Change text to black */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Space between buttons */
+}
+
+/* Login Page Styles */
+.login-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #A69080; /* Background color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #865D36; /* Darker border color */
+    border-radius: 5px;
+    background-color: #A69080; /* Background color */
+    color: #3E262E; /* Text color */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #AC8968; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #865D36; /* Darker background color on hover */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user {
+    background-color: #dcf8c6;
+
+    text-align: right;
+}
+
+.bot {
+    background-color: #f1f0f0;
+    text-align: left;
+}
+
+/* General Link Styles */
+a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Link Hover State */
+a:hover {
+    color: #AC8968; /* Optional: Change color on hover if desired */
+}
+
+/* Link Active State */
+a:active {
+    color: #865D36; /* Optional: Change color when link is active */
+}
+
+
+
+/* Optional: Hide the entire Google Translate footer bar */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+}
+
+/* Adjust the positioning to remove extra space if needed */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+.bg-image{
+    background-image: url("./DALL·E 2024-08-22 04.22.24 - A more subdued scene representing various professions in Tamil Nadu, Ind.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.filter-blur{
+    background:  rgba(240,227,227, 0.5);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 1;
+}

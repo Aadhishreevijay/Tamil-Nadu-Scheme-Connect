@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #A69080; /* Background color */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E262E; /* Navbar background color */
+    padding: 1rem 2rem;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #AC8968; /* Hover effect color */
+}
+
+h1 {
+    color: #3E262E; /* Heading color */
+    margin-top: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #865D36; /* Border color */
+}
+
+#controls {
+    margin: 20px;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ngo-btn {
+    background-color: #93785B; /* Button background color */
+}
+
+.ngo-btn:hover {
+    background-color: #AC8968; /* Button hover color */
+}
+
+.hospital-btn {
+    background-color: #865D36; /* Button background color */
+}
+
+.hospital-btn:hover {
+    background-color: #AC8968; /* Button hover color */
+}
+
+.blood-donation-btn {
+    background-color: #3E262E; /* Button background color */
+}
+
+.blood-donation-btn:hover {
+    background-color: #AC8968; /* Button hover color */
+}
+
+.school-btn {
+    background-color: #582c0c; /* Button background color */
+}
+
+.school-btn:hover {
+    background-color: #AC8968; /* Button hover color */
+}
+
+/* Optional: Hide the entire Google Translate footer bar */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+}
+/* Adjust the positioning to remove extra space if needed */
+body {
+    top: 0px !important;
+    position: static !important;
+}

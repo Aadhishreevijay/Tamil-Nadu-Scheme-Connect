@@ -1,0 +1,163 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #3E262E; /* Main navbar background color */
+    padding: 1rem 2rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #AC8968; /* Hover effect color */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #3E262E; /* Main navbar background color */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #865D36; /* Dropdown background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #AC8968; /* Hover effect color */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #AC8968; /* Hover effect color */
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: #A69080; /* Main content background color */
+}
+
+/* Flexbox for card container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card styles */
+.card {
+    background-color: #93785B; /* Card background color */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.33% - 20px); /* 3 cards per row */
+    box-sizing: border-box;
+    margin-right:0px;
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+    color: white;
+}
+
+.card-content h3 {
+    margin: 0;
+}
+
+.card-content p {
+    margin: 10px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+}
+
+/* Optional: Hide the entire Google Translate footer bar */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+}
+/* Adjust the positioning to remove extra space if needed */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* Style for Google Translate widget */
+#google_translate_element {
+    position: relative;
+    left: -100px;  /* Ensure relative positioning to apply left offset */
+}
+
+body > .skiptranslate > iframe {
+    position: relative;
+    left: -100px; /* Move 40px to the left */
+}
