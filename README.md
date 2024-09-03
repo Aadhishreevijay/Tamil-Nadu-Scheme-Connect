@@ -58,6 +58,10 @@ Built using Flask, JavaScript, CSS, and HTML, Tamil Nadu Scheme Connect offers u
 - **llama_index**: For document indexing and query processing.
 - **dotenv**: For managing environment variables.
 
+## Chatbot - Output
+
+<img width="794" alt="image" src="https://github.com/user-attachments/assets/feea0ad1-4295-485e-b700-d0f028bba981">
+
 ## Additional Resources
 
 For convenience, you can download the indexed documents from the following Google Drive link: [Indexed Documents](https://drive.google.com/drive/folders/1X5AOffQVnzLr7H-8lfTrlOQuKWxrTcjT?usp=sharing)
