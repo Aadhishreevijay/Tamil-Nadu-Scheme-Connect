@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='newsstyles.css') }}">
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navbar">
+            <h1>Tamil Nadu Scheme Connect</h1>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chatbot">Chatbot</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/map">Map</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Schemes</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="tamilnadu-Disaster-Management" onclick="onNavItemClick('Disaster-Management')">Disaster Management</a>
+                        <a href="#" id="tamilnadu-Welfare" onclick="onNavItemClick('welfare')">Welfare</a>
+                        <a href="#" id="tamilnadu-Education" onclick="onNavItemClick('Education')">Education</a>
+                        <a href="#" id="tamilnadu-law" onclick="onNavItemClick('law')">Law</a>
+                        <a href="#" id="tamilnadu-healthcare" onclick="onNavItemClick('healthcare')">Healthcare</a>
+                        <a href="#" id="tamilnadu-women-empowerment" onclick="onNavItemClick('women-empowerment')">Women Empowerment</a>
+                        <a href="#" id="tamilnadu-NGO" onclick="onNavItemClick('NGO')">NGO</a>
+                    </div>
+                </li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            <!-- News cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='newsscript.js') }}"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,ta,hi', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // JavaScript to simulate the click event
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('tamilnadu-Welfare').click();
+        });
+    </script>
+</body>
+</html>

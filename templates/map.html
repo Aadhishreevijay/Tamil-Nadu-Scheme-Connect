@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu Scheme Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mapstyles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Tamil Nadu Scheme Connect</h1>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chatbot">Chatbot</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+    </header>
+
+    <h1>Find Organizations Near Your Location</h1>
+    
+    <div id="map" style="height: 500px; width: 100%;"></div>
+
+    <div id="controls">
+        <button id="find-ngos" class="ngo-btn">Find NGOs Nearby</button>
+        <button id="find-hospitals" class="hospital-btn">Find Hospitals Nearby</button>
+        <button id="find-blood-donation-camps" class="blood-donation-btn">Find Blood Donation Camps Nearby</button>
+        <button id="find-schools" class="school-btn">Find Schools Nearby</button>
+    </div>
+
+    <!-- Load the Google Maps and Places API with your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=your-api-key=places&callback=initMap" async defer></script>
+
+    <!-- Map initialization script -->
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 13.0827, lng: 80.2707},  // Default to Chennai, Tamil Nadu
+                zoom: 12
+            });
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='mapscripts.js') }}"></script>
+    <script src="scripts.js"></script>
+    
+    <!-- Google Translate script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,ta,hi', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
